@@ -1,0 +1,79 @@
+/* ===== Variables de diseño ===== */
+:root {
+  --color-header: #2c3e50;
+  --color-main: #ecf0f1;
+  --color-aside: #bdc3c7;
+  --color-footer: #2c3e50;
+  --color-text-light: #ffffff;
+  --color-text-dark: #2c3e50;
+  --font-main: 'Segoe UI', sans-serif;
+}
+
+/* ===== Reset básico ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== GRID en el body ===== */
+body {
+  font-family: var(--font-main);
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr 200px;   /* main ocupa todo, aside fijo */
+  grid-template-rows: auto 1fr auto;  /* header | contenido | footer */
+  grid-template-areas:
+    "header header"
+    "main   aside"
+    "footer footer";
+}
+
+/* ===== Áreas del Grid ===== */
+header {
+  grid-area: header;
+  background-color: var(--color-header);
+  color: var(--color-text-light);
+  padding: 1rem 2rem;
+}
+
+main {
+  grid-area: main;
+  background-color: var(--color-main);
+  color: var(--color-text-dark);
+  padding: 2rem;
+}
+
+aside {
+  grid-area: aside;
+  background-color: var(--color-aside);
+  color: var(--color-text-dark);
+  padding: 2rem 1rem;
+}
+
+footer {
+  grid-area: footer;
+  background-color: var(--color-footer);
+  color: var(--color-text-light);
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+/* ===== FLEXBOX en la nav ===== */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
