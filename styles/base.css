@@ -141,6 +141,7 @@ main h1 {
   background-color: var(--color-card-header);
   padding: 0.7rem 1.2rem;
   text-align: center;
+  color: var(--color-card-header-text); 
 }
 
 .card-header h2 {
