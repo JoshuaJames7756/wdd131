@@ -1,0 +1,331 @@
+/* ============================================
+   WDD 131 — Edgar Joshua Miranda
+   base.css — Main Stylesheet
+   ============================================ */
+
+:root {
+  /* Palette: Deep navy + warm cream + electric teal accent */
+  --color-bg: #f5f3ef;
+  --color-bg-card: #ffffff;
+  --color-header-bg: #1a2744;
+  --color-header-text: #e8e2d4;
+  --color-nav-hover: #3ddbd9;
+  --color-footer-bg: #1a2744;
+  --color-footer-text: #a8b4c8;
+  --color-footer-modified: #3ddbd9;
+  --color-text: #1e1e2e;
+  --color-text-muted: #4a4a6a;
+  --color-card-header: #1a2744;
+  --color-card-header-text: #e8e2d4;
+  --color-accent: #3ddbd9;
+  --color-link: #1a5276;
+  --color-link-hover: #3ddbd9;
+  --color-border: #ddd8ce;
+
+  /* Typography */
+  --font-display: 'Lora', serif;
+  --font-body: 'Source Sans 3', sans-serif;
+  /* Spacing */
+  --radius-card: 10px;
+  --max-width: 860px;
+  --gap: 1.5rem;
+}
+
+/* ── Reset ─────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Base ───────────────────────────────────── */
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-size: 1rem;
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ─────────────────────────────────── */
+header {
+  background-color: var(--color-header-bg);
+  color: var(--color-header-text);
+  text-align: center;
+  padding: 0;
+}
+
+#course-title {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  padding: 1rem 1.5rem 0.75rem;
+  color: var(--color-header-text);
+}
+
+/* ── Nav ────────────────────────────────────── */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+nav a {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--color-header-text);
+  text-decoration: none;
+  padding: 0.65rem 1.5rem;
+  letter-spacing: 0.03em;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--color-nav-hover);
+  border-bottom-color: var(--color-nav-hover);
+  background-color: rgba(61, 219, 217, 0.06);
+  outline: none;
+}
+
+/* ── Main ───────────────────────────────────── */
+main {
+  flex: 1;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 3rem;
+}
+
+main h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  text-align: center;
+  color: var(--color-text);
+  margin-bottom: 2rem;
+  letter-spacing: -0.01em;
+}
+
+/* ── Cards Grid ─────────────────────────────── */
+.cards-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;  
+  gap: var(--gap);
+  align-items: start;
+}
+
+/* ── Card ───────────────────────────────────── */
+.card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(26, 39, 68, 0.07);
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 24px rgba(26, 39, 68, 0.12);
+}
+
+.card-header {
+  background-color: var(--color-card-header);
+  padding: 0.7rem 1.2rem;
+  text-align: center;
+}
+
+.card-header h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-card-header-text);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.card-body {
+  padding: 1.2rem;
+}
+
+/* ── About Content ──────────────────────────── */
+.about-content {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.2rem;
+}
+
+.about-text {
+  flex: 1;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.about-text p + p {
+  margin-top: 0.6rem;
+}
+
+.about-text strong {
+  color: var(--color-header-bg);
+  font-weight: 600;
+}
+
+.about-img-wrap {
+  flex-shrink: 0;
+}
+
+.about-img-wrap img {
+  width: 130px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 2px solid var(--color-border);
+  display: block;
+}
+
+/* ── Location Block ─────────────────────────── */
+.location-block h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: center;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.flag-section {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.flag-wrap {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.flag-wrap img {
+  width: 100px;
+  height: 65px;
+  object-fit: cover;
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  display: block;
+}
+
+.flag-placeholder {
+  width: 100px;
+  height: 65px;
+  background: linear-gradient(to bottom, #d52b1e 33%, #f9d62e 33%, #f9d62e 66%, #007a3d 66%);
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+}
+
+.flag-caption {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+.location-text {
+  font-size: 0.875rem;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* ── Resources Card ─────────────────────────── */
+.resources-body {
+  padding: 1.4rem 1.4rem 1.2rem;
+}
+
+.resources-list {
+  list-style: disc;
+  padding-left: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.resources-list li {
+  font-size: 0.9rem;
+}
+
+.resources-list a {
+  color: var(--color-link);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.18s ease;
+}
+
+.resources-list a:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+/* ── Footer ─────────────────────────────────── */
+footer {
+  background-color: var(--color-footer-bg);
+  color: var(--color-footer-text);
+  text-align: center;
+  padding: 1.2rem 1rem;
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+}
+
+footer p + p {
+  margin-top: 0.3rem;
+}
+
+#lastModified {
+  color: var(--color-footer-modified);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+/* ── Responsive ─────────────────────────────── */
+@media (max-width: 680px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+    padding: 0.55rem 1rem;
+  }
+
+  .about-content {
+    flex-direction: column-reverse;
+  }
+
+  .about-img-wrap img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+  }
+
+  .flag-section {
+    flex-direction: column;
+  }
+
+  .flag-wrap img,
+  .flag-placeholder {
+    width: 80px;
+    height: 52px;
+  }
+}
