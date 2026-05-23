@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolivia Country Page</title>
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Bolivia</h1>
+    </header>
+
+    <main>
+
+        <div class="hero">
+
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 768px)">
+                <img src="images/hero-small.webp" alt="Bolivia Landscape">
+            </picture>
+
+            <!-- DATA -->
+
+            <section class="card data-card">
+                <h2>Data</h2>
+
+                <p><strong>Area:</strong> 1,098,581 sq km</p>
+                <p><strong>Population:</strong> 12 million</p>
+                <p><strong>Capital:</strong> Sucre</p>
+                <p><strong>Languages:</strong> Spanish, Quechua</p>
+                <p><strong>Currency:</strong> Boliviano</p>
+                <p><strong>Time Zone:</strong> UTC -4</p>
+                <p><strong>Calling Code:</strong> +591</p>
+                <p><strong>Internet TLD:</strong> .bo</p>
+            </section>
+
+            <!-- WEATHER -->
+
+            <section class="card weather-card">
+                <h2>Weather</h2>
+
+                <img src="images/weather.svg"
+                    alt="Weather Icon"
+                    class="weather-icon">
+
+                <p><strong>Temperature:</strong> 8 °C</p>
+                <p><strong>Conditions:</strong> Cloudy</p>
+                <p><strong>Wind:</strong> 10 km/h</p>
+                <p><strong>Wind Chill:</strong>
+                    <span id="windChill"></span>
+                </p>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span> Joshua James | Bolivia
+        </p>
+
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>

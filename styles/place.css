@@ -1,0 +1,96 @@
+:root {
+    --primary-color: #c8102e;
+    --secondary-color: #007a3d;
+    --light-bg: rgba(255, 255, 255, 0.85);
+    --text-color: #111;
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6efe3;
+    color: var(--text-color);
+}
+
+/* HEADER */
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom: 10px solid var(--secondary-color);
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* MAIN */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* HERO */
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+}
+
+/* CARDS */
+
+.card {
+    background-color: rgba(255,255,255,0.92);
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.card h2 {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.card p {
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+/* WEATHER SVG */
+
+.weather-icon {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 1rem auto;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}

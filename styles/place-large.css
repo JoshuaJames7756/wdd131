@@ -1,0 +1,38 @@
+@media screen and (min-width: 768px) {
+
+    .hero {
+        position: relative;
+    }
+
+    /* DATA CARD */
+
+    .data-card {
+        position: absolute;
+        top: 40px;
+        left: 30px;
+        width: 280px;
+        background-color: rgba(255,255,255,0.85);
+    }
+
+    /* WEATHER CARD */
+
+    .weather-card {
+        position: absolute;
+        bottom: 40px;
+        right: 30px;
+        width: 250px;
+        background-color: rgba(255,255,255,0.85);
+    }
+
+    /* WEATHER EMOJI */
+
+    .weather-card h2::after {
+        content: " ⛅";
+    }
+
+    /* HIDE SVG ON DESKTOP */
+
+    .weather-icon {
+        display: none;
+    }
+}
