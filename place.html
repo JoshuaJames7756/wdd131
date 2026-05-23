@@ -2,70 +2,102 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Explore Bolivia with information about its culture, weather, geography, and beautiful landscapes.">
+    <meta name="author"
+          content="Joshua James">
     <title>Bolivia Country Page</title>
-
-    <link rel="stylesheet" href="styles/place.css">
-    <link rel="stylesheet" href="styles/place-large.css">
-
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+          rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="styles/place.css">
+    <link rel="stylesheet"
+          href="styles/place-large.css">
+    <!-- JAVASCRIPT -->
     <script src="scripts/place.js" defer></script>
 </head>
-<body>
 
+<body>
+    <!-- HEADER -->
     <header>
+        <img
+            src="images/flag.webp"
+            alt="Bolivia Flag"
+            class="flag">
         <h1>Bolivia</h1>
     </header>
-
+    <!-- MAIN -->
     <main>
-
         <div class="hero">
-
+            <!-- RESPONSIVE IMAGE -->
             <picture>
-                <source srcset="images/hero-large.webp" media="(min-width: 768px)">
-                <img src="images/hero-small.webp" alt="Bolivia Landscape">
+                <source
+                    srcset="images/hero-large.webp"
+                    media="(min-width: 768px)">
+                <img
+                    src="images/hero-small.webp"
+                    alt="Bolivia Landscape">
             </picture>
 
-            <!-- DATA -->
+            <!-- DATA CARD -->
 
             <section class="card data-card">
                 <h2>Data</h2>
-
                 <p><strong>Area:</strong> 1,098,581 sq km</p>
                 <p><strong>Population:</strong> 12 million</p>
                 <p><strong>Capital:</strong> Sucre</p>
-                <p><strong>Languages:</strong> Spanish, Quechua</p>
+                <p><strong>Languages:</strong> Spanish, Quechua, Aymara</p>
                 <p><strong>Currency:</strong> Boliviano</p>
                 <p><strong>Time Zone:</strong> UTC -4</p>
                 <p><strong>Calling Code:</strong> +591</p>
                 <p><strong>Internet TLD:</strong> .bo</p>
             </section>
 
-            <!-- WEATHER -->
+            <!-- WEATHER CARD -->
 
             <section class="card weather-card">
                 <h2>Weather</h2>
-
-                <img src="images/weather.svg"
+                <img
+                    src="images/weather.svg"
                     alt="Weather Icon"
                     class="weather-icon">
-
-                <p><strong>Temperature:</strong> 8 °C</p>
-                <p><strong>Conditions:</strong> Cloudy</p>
-                <p><strong>Wind:</strong> 10 km/h</p>
-                <p><strong>Wind Chill:</strong>
+                <p>
+                    <strong>Temperature:</strong>
+                    <span id="temperature">8</span> °C
+                </p>
+                <p>
+                    <strong>Conditions:</strong>
+                    Cloudy
+                </p>
+                <p>
+                    <strong>Wind:</strong>
+                    <span id="windSpeed">10</span> km/h
+                </p>
+                <p>
+                    <strong>Wind Chill:</strong>
                     <span id="windChill"></span>
                 </p>
             </section>
-
         </div>
-
     </main>
+
+    <!-- FOOTER -->
 
     <footer>
         <p>
-            &copy; <span id="currentyear"></span> Joshua James | Bolivia
+            &copy;
+            <span id="currentyear"></span>
+            Joshua James | Bolivia
         </p>
-
         <p id="lastModified"></p>
     </footer>
 

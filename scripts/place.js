@@ -1,18 +1,22 @@
-// FOOTER
+// CURRENT YEAR
 
 document.getElementById("currentyear").textContent =
 new Date().getFullYear();
 
+// LAST MODIFIED
+
 document.getElementById("lastModified").textContent =
 `Last Modified: ${document.lastModified}`;
 
-
-// WEATHER
+// WEATHER VALUES
 
 const temperature = 8;
 const windSpeed = 10;
 
+// WIND CHILL FUNCTION
+
 function calculateWindChill(temp, speed) {
+
     return (
         13.12 +
         0.6215 * temp -
@@ -21,10 +25,17 @@ function calculateWindChill(temp, speed) {
     ).toFixed(1);
 }
 
+// WIND CHILL LOGIC
+
 let windChill = "N/A";
 
 if (temperature <= 10 && windSpeed > 4.8) {
-    windChill = `${calculateWindChill(temperature, windSpeed)} °C`;
+
+    windChill =
+    `${calculateWindChill(temperature, windSpeed)} °C`;
 }
 
-document.getElementById("windChill").textContent = windChill;
+// DISPLAY RESULT
+
+document.getElementById("windChill").textContent =
+windChill;

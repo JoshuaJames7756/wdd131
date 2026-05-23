@@ -30,7 +30,7 @@
         content: " ⛅";
     }
 
-    /* HIDE SVG ON DESKTOP */
+    /* HIDE SVG ON LARGE VIEW */
 
     .weather-icon {
         display: none;
