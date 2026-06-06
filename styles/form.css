@@ -71,11 +71,15 @@ textarea {
     margin-left: .5rem;
 }
 
-.checkbox-group label {
-    font-weight: normal;
-    display: flex;
+.checkbox-group {
+    display: grid;
+    grid-template-columns: auto 1fr;
     gap: .5rem;
     align-items: center;
+}
+
+.checkbox-group label {
+    font-weight: normal;
 }
 
 .checkbox-group input {
@@ -112,7 +116,15 @@ textarea {
 }
 
 footer {
+    background-color: #4b004f;
+    color: white;
+    text-align: center;
+    padding: 1rem;
     margin-top: 2rem;
+}
+
+footer p {
+    margin: .3rem 0;
 }
 
 @media (min-width: 768px) {
@@ -188,6 +200,82 @@ footer {
     padding: .8rem 1.5rem;
     border-radius: 6px;
     transition: .3s;
+}
+
+.back-link:hover {
+    opacity: .9;
+}
+
+.rating {
+    display: grid;
+    gap: .75rem;
+}
+
+.rating input[type="radio"] {
+    width: auto;
+}
+
+.rating label {
+    display: inline-block;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.confirmation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+
+.success-card {
+    background: white;
+    max-width: 600px;
+    width: 100%;
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,.1);
+}
+
+.checkmark {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    background: #4b004f;
+    color: white;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter-box {
+    background: #f3f3f3;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1.5rem 0;
+}
+
+.counter-box span {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.counter-box strong {
+    font-size: 2rem;
+    color: #4b004f;
+}
+
+.back-link {
+    display: inline-block;
+    text-decoration: none;
+    background: #4b004f;
+    color: white;
+    padding: .8rem 1.5rem;
+    border-radius: 6px;
 }
 
 .back-link:hover {

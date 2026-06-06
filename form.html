@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Product Review Form">
+    <meta
+    name="description"
+    content="Submit a product review by selecting a product, rating its features, and sharing your feedback through this responsive review form.">
     <meta name="author" content="Joshua James">
     <title>Product Review Form</title>
 
@@ -33,30 +35,20 @@
 
                 <div class="rating">
 
-                    <label>
-                        ☆
-                        <input type="radio" name="rating" value="1" required>
-                    </label>
+                    <input type="radio" id="star1" name="rating" value="1" required>
+                    <label for="star1">☆</label>
 
-                    <label>
-                        ☆☆
-                        <input type="radio" name="rating" value="2">
-                    </label>
+                    <input type="radio" id="star2" name="rating" value="2" required>
+                    <label for="star2">☆☆</label>
 
-                    <label>
-                        ☆☆☆
-                        <input type="radio" name="rating" value="3">
-                    </label>
+                    <input type="radio" id="star3" name="rating" value="3" required>
+                    <label for="star3">☆☆☆</label>
 
-                    <label>
-                        ☆☆☆☆
-                        <input type="radio" name="rating" value="4">
-                    </label>
+                    <input type="radio" id="star4" name="rating" value="4" required>
+                    <label for="star4">☆☆☆☆</label>
 
-                    <label>
-                        ☆☆☆☆☆
-                        <input type="radio" name="rating" value="5">
-                    </label>
+                    <input type="radio" id="star5" name="rating" value="5" required>
+                    <label for="star5">☆☆☆☆☆</label>
 
                 </div>
             </div>
@@ -76,23 +68,43 @@
 
                 <div class="checkbox-group">
 
-                    <label>
-                        <input type="checkbox" name="features" value="Durability">
+                    <input
+                        type="checkbox"
+                        id="durability"
+                        name="features"
+                        value="Durability">
+
+                    <label for="durability">
                         Durability
                     </label>
 
-                    <label>
-                        <input type="checkbox" name="features" value="Ease of Use">
+                    <input
+                        type="checkbox"
+                        id="ease"
+                        name="features"
+                        value="Ease of Use">
+
+                    <label for="ease">
                         Ease of Use
                     </label>
 
-                    <label>
-                        <input type="checkbox" name="features" value="Performance">
+                    <input
+                        type="checkbox"
+                        id="performance"
+                        name="features"
+                        value="Performance">
+
+                    <label for="performance">
                         Performance
                     </label>
 
-                    <label>
-                        <input type="checkbox" name="features" value="Design">
+                    <input
+                        type="checkbox"
+                        id="design"
+                        name="features"
+                        value="Design">
+
+                    <label for="design">
                         Design
                     </label>
 
