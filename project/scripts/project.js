@@ -41,6 +41,36 @@ const resources = [
         title: "JavaScript Info",
         category: "JavaScript",
         description: "Detailed JavaScript learning guide."
+    },
+    {
+        title: "MDN Web Docs",
+        category: "HTML",
+        description: "Official documentation for web technologies."
+    },
+    {
+        title: "W3Schools",
+        category: "CSS",
+        description: "Interactive tutorials and examples."
+    },
+    {
+        title: "freeCodeCamp",
+        category: "JavaScript",
+        description: "Free coding lessons and certifications."
+    },
+    {
+        title: "BYU Pathway",
+        category: "HTML",
+        description: "Online learning resources and courses."
+    },
+    {
+        title: "CSS Tricks",
+        category: "CSS",
+        description: "Helpful CSS articles and guides."
+    },
+    {
+        title: "JavaScript Info",
+        category: "JavaScript",
+        description: "Detailed JavaScript learning guide."
     }
 ];
 
@@ -196,7 +226,11 @@ function setupForm() {
             document.querySelector(
                 'input[name="technology"]:checked'
             ).value;
+        
+        const comments =
+            document.querySelector("#comments").value;
 
+        localStorage.setItem("comments", comments);
         localStorage.setItem("studentName", name);
         localStorage.setItem("studentEmail", email);
         localStorage.setItem("experience", experience);

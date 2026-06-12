@@ -244,3 +244,42 @@ fieldset label {
     display: block;
     margin-top: 0.5rem;
 }
+
+.hero {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+    text-align: center;
+    padding-bottom: 1rem;
+    transition: transform .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.tip-section button,
+.filter-buttons button,
+input[type="submit"] {
+    transition: 0.3s ease;
+}
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 2px;
+}
