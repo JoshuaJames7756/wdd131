@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Joshua James">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Contact CodeStart Academy and share your programming experience and interests."
+    >
+
+    <title>CodeStart Academy | Contact</title>
+
+    <link rel="stylesheet" href="styles/project.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+
+<header>
+
+    <h1>💻 CodeStart Academy</h1>
+
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+
+<section>
+
+    <h2>Contact Form</h2>
+
+    <p>
+        Complete this form to share your programming interests and learning goals.
+    </p>
+
+</section>
+
+<section>
+
+    <form id="contactForm">
+
+        <label for="fullname">
+            Full Name
+        </label>
+
+        <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            required
+        >
+
+        <label for="email">
+            Email Address
+        </label>
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            required
+        >
+
+        <label for="experience">
+            Experience Level
+        </label>
+
+        <select
+            id="experience"
+            name="experience"
+            required
+        >
+            <option value="">
+                Select One
+            </option>
+
+            <option value="Beginner">
+                Beginner
+            </option>
+
+            <option value="Intermediate">
+                Intermediate
+            </option>
+
+            <option value="Advanced">
+                Advanced
+            </option>
+
+        </select>
+
+        <fieldset>
+
+            <legend>
+                Favorite Technology
+            </legend>
+
+            <label>
+                <input
+                    type="radio"
+                    name="technology"
+                    value="HTML"
+                    required
+                >
+                HTML
+            </label>
+
+            <label>
+                <input
+                    type="radio"
+                    name="technology"
+                    value="CSS"
+                >
+                CSS
+            </label>
+
+            <label>
+                <input
+                    type="radio"
+                    name="technology"
+                    value="JavaScript"
+                >
+                JavaScript
+            </label>
+
+        </fieldset>
+
+        <label for="comments">
+            Comments
+        </label>
+
+        <textarea
+            id="comments"
+            name="comments"
+            rows="5"
+        ></textarea>
+
+        <input
+            type="submit"
+            value="Submit Form"
+        >
+
+    </form>
+
+    <p id="formMessage"></p>
+
+</section>
+
+<section>
+
+    <h2>Why Learn Programming?</h2>
+
+    <p>
+        Programming skills are useful in many careers and help develop
+        logical thinking, problem solving, and creativity.
+    </p>
+
+</section>
+
+</main>
+
+<footer>
+
+    <p>&copy; 2026 Joshua James</p>
+
+    <p>
+        <a href="references.html">
+            References
+        </a>
+    </p>
+
+</footer>
+
+</body>
+</html>
